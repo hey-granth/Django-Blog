@@ -63,3 +63,7 @@ Database migration in Django synchronizes the database schema with changes in th
 - Ensures consistency between code and database.
 - Simplifies schema updates without manual SQL.
 ---
+
+## Django ORM
+
+Django ORM (Object-Relational Mapping) is a tool that allows developers to interact with databases using Python code instead of raw SQL. It enables creating, retrieving, updating, and deleting database records as Python objects, simplifying database operations and ensuring compatibility across different database systems.

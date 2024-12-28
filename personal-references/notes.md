@@ -45,3 +45,21 @@
 - When er go to `localhost/about/` it will cut off the `about/` part and send the remaining string to the about app's URLconf for further processing.
 
 ---
+## Database Migration in Django
+
+Database migration in Django synchronizes the database schema with changes in the `models.py` file, ensuring consistency between the code and database.
+
+### Key Commands
+- `python manage.py makemigrations`: Generates migration files for model changes.
+- `python manage.py migrate`: Applies migration files to the database.
+
+### Example Workflow
+1. Define or update a model in `models.py`.
+2. Run `makemigrations` to create migration files.
+3. Run `migrate` to apply changes to the database.
+
+### Benefits
+- Tracks schema changes.
+- Ensures consistency between code and database.
+- Simplifies schema updates without manual SQL.
+---

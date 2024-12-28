@@ -52,6 +52,7 @@ Database migration in Django synchronizes the database schema with changes in th
 ### Key Commands
 - `python3 manage.py makemigrations`: Generates migration files for model changes.
 - `python3 manage.py migrate`: Applies migration files to the database.
+- `python3 manage.py sqlmigrate <app_name> <migration_number>`: Displays the SQL code for a specific migration.
 
 ### Example Workflow
 1. Define or update a model in `models.py`.

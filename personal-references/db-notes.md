@@ -1,0 +1,30 @@
+# Database And Migrations Notes (Terminal Commands)
+
+- `python3 manage.py makemigrations`: Generates migration files for model changes.
+- `python3 manage.py migrate`: Applies migration files to the database.
+- `python3 manage.py sqlmigrate <app_name> <migration_number>`: Displays the SQL code for a specific migration.
+- `python3 manage.py showmigrations`: Lists all migrations and their status.
+- `python3 manage.py shell`: Opens the Django shell for interacting with the database.
+- `from blog.models import Post`: Imports the Post model for database operations.
+- `from django.contrib.auth.models import User`: Imports the User model for authentication.
+- `User.objects.all()`: Retrieves all User objects from the database.
+- `User.objects.first()`: Retrieves the first User object from the database.
+- `User.objects.filter(username='granth')`: Retrieves User objects with the username 'admin'.
+- `User.objects.filter(username='granth').first()`: Retrieves the first User object with the username 'admin'.
+- `user = User.objects.filter(username='granth').first()`: Assigns the User object with the username 'admin' to the variable `user`.
+- `user.id`: Retrieves the ID of the User object.
+- `user.pk`: Retrieves the primary key of the User object.
+- `user = User.objects.get(id=1)`: Retrieves the User object with the ID of 1.
+- `Post.objects.all()`: Retrieves all Post objects from the database.
+- `post_1 = Post(title='Blog 1', content='First post content!', author=user)`: Creates a new Post object with the specified attributes.
+- `post_1.save()`: Saves the new Post object to the database.
+- `post_2 = Post(title='Blog 2', content='Second post content!', author_id=user.id)`: Creates another Post object.
+- `post_2.save()`: Saves the new Post object to the database.
+- `post = Post.objects.first()`: Retrieves the first Post object from the database.
+- `post.author`: Retrieves the author (User object) of the Post.
+- `post.date_posted`: Retrieves the date the Post was created.
+- `post.content`: Retrieves the content of the Post.
+- `post.author.email`: Retrieves the email of the author (User object) of the Post.
+- `user.post_set.all()`: Retrieves all Post objects associated with the user.
+- `user.post_set.create(title='Blog 3', content='Third post content!')`: Creates a new Post object associated with the user.
+- `Post.objects.filter(author=user)`: Retrieves all Post objects created by the user. Django automatically saves the post by specifying the user into the database. So we need not run the save command here.

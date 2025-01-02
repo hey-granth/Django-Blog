@@ -14,3 +14,4 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    # This is a dunder (short for double underscore)  method that returns the title of the post when we query the Post model.

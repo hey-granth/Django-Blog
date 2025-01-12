@@ -84,3 +84,6 @@ Django messages framework allows developers to display messages to users based o
 - `messages.error(request, message)`: Displays an error message.
 
 ---
+## Crispy Forms
+Crispy Forms is a Django application that helps developers create elegant and customizable forms using the `django-crispy-forms` package. It simplifies form styling and layout by providing a variety of form templates and styles that can be easily customized to match the application's design.
+Documentation: https://django-crispy-forms.readthedocs.io/en/latest/

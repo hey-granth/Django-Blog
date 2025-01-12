@@ -68,3 +68,19 @@ Database migration in Django synchronizes the database schema with changes in th
 ## Django ORM
 
 Django ORM (Object-Relational Mapping) is a tool that allows developers to interact with databases using Python code instead of raw SQL. It enables creating, retrieving, updating, and deleting database records as Python objects, simplifying database operations and ensuring compatibility across different database systems.
+
+---
+## CSRF Token
+Django uses CSRF (Cross-Site Request Forgery) tokens to protect against malicious attacks. CSRF tokens are unique, random values generated for each user session and included in forms to verify the authenticity of requests. When a user submits a form, Django checks the CSRF token to ensure that the request originated from the correct site and not from a malicious source.
+
+---
+## Django Messages
+Django messages framework allows developers to display messages to users based on their actions or system events. Messages can be used to provide feedback, alerts, or notifications to users, enhancing the user experience and improving communication between the application and users.
+
+- `messages.debug(request, message)`: Displays a debug-level message.
+- `messages.info(request, message)`: Displays an informational message.
+- `messages.success(request, message)`: Displays a success message.
+- `messages.warning(request, message)`: Displays a warning message.
+- `messages.error(request, message)`: Displays an error message.
+
+---

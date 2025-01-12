@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            <!-- This form will be submitted to the same URL -->
+            {% csrf_token %}
+            <!-- This is a security feature to prevent Cross Site Request Forgery -->
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today!</legend>
+                {{ form.as_p }}
+{#                as_p is a method that will render all the fields in the form as paragraph elements. without this method, the form will not be rendered.#}
+                <!-- This will render all the fields in the form -->
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already have an account? <a href="#">Sign In</a>
+            </small>
+            {#            This will redirect to the login page#}
+        </div>
+    </div>
+{% endblock content %}

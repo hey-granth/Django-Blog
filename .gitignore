@@ -22,3 +22,9 @@ venv/
 ENV/
 
 *.env
+
+venv/
+poetry.lock
+
+.venv/
+poetry.lock

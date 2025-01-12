@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from .forms import UserRegisterForm
 
 
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserRegisterForm(request.POST)
         # If the form is valid, then we are going to save the user.
         if form.is_valid():
             form.save()
@@ -17,7 +17,9 @@ def register(request):
             return redirect('blog-home')
 
     else:
-        form = UserCreationForm()
+        form = UserRegisterForm()
+        # UserRegisterForm is a form that is already provided by Django. It is a form that has a username, email, and password field.
+
     # 'UerCreationForm' is a form that is already provided by Django. It is a form that has a username, email, and password field.
     # We are going to pass this form to our template.
 

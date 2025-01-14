@@ -52,7 +52,9 @@ dependencies = [
     "tomlkit (==0.13.2)",
     "trove-classifiers (==2025.1.10.15)",
     "urllib3 (==2.3.0)",
-    "virtualenv (==20.28.1)"
+    "virtualenv (==20.28.1)",
+    "crispy-bootstrap4 (==2024.10)",
+    "djangorestframework (==3.15.2)"
 ]
 
 

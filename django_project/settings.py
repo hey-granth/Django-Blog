@@ -129,3 +129,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home'
+# 'blog-home' is the name of the URL pattern that we want to redirect the user to after they login.
+
+LOGIN_URL = 'login'
+# 'login' is the name of the URL pattern that we want to redirect the user to, whenever they access a "login_required" page.
+

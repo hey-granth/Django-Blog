@@ -121,6 +121,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT is the directory on the file system where uploaded files are saved.
+# BASE_DIR is the directory where the settings.py file is located.
+MEDIA_URL = '/media/'
+# for performance reasons, these files are stored on the system file system, not in the database.
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

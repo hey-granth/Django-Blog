@@ -87,3 +87,40 @@ Django messages framework allows developers to display messages to users based o
 ## Crispy Forms
 Crispy Forms is a Django application that helps developers create elegant and customizable forms using the `django-crispy-forms` package. It simplifies form styling and layout by providing a variety of form templates and styles that can be easily customized to match the application's design.
 Documentation: https://django-crispy-forms.readthedocs.io/en/latest/
+
+---
+## Django Signals
+Django signals are used to allow decoupled applications to get notified when certain actions occur elsewhere in the application. Signals are similar to the observer pattern and can be used to perform actions in response to specific events or triggers, such as when a model is saved, deleted, or updated.
+
+`Decoupled Applications`: Applications that are independent of each other and do not rely on direct communication or dependencies to function.
+
+---
+## Meta Classes in Python
+
+### What is a Meta Class?
+A **meta class** in Python is a class **of a class**. It defines how a class behaves, just like a class defines how an object behaves.
+
+### Key Points:
+- **Classes are objects** in Python, and meta classes are what create these class objects.
+- They allow you to control the creation, modification, and behavior of classes.
+
+### Why Use Meta Classes?
+- To enforce rules or constraints on classes.
+- To automatically add or modify methods and attributes in classes.
+- To create frameworks or libraries with advanced functionality.
+
+### Example:
+```python
+# Define a meta class
+class MyMeta(type):
+    def __new__(cls, name, bases, dct):
+        print(f"Creating class {name}")
+        return super().__new__(cls, name, bases, dct)
+
+# Use the meta class to create a class
+class MyClass(metaclass=MyMeta):
+    pass
+
+# Output: Creating class MyClass
+```
+---
